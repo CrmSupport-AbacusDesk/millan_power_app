@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'Aboutus Modal' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="main-modal">
+        <div class="modal-box">
+            <h1>{{'Milan Power' | translate}}</h1>
+            <h2>{{'Your request to access the Milan Power is under review. You will be able to log in as soon as the overseeing admin acknowledges your application.' | translate}}</h2>
+            <p>{{'Meanwhile, you can contact us' | translate}} <a href="tel:+91-141-4003819">+91-141-4003819</a> {{'or mail us' | translate}} <span> <a href="mailto:ashok.agr.milan@gmail.com">ashok.agr.milan@gmail.com</a>
+            </span> {{'if you any question' | translate}}.</p>
+            <div class="modal-cls" (click)="gotoHomePage()">
+                <i class="material-icons">cancel</i>
+            </div>
+        </div>
+    </div>
+</ion-content>
