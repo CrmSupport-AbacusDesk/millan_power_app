@@ -1,6 +1,6 @@
 import { DigitalcatalogPage } from './../digitalcatalog/digitalcatalog';
 import { Component } from '@angular/core';
-import { NavController, Loading, LoadingController, AlertController, ModalController, NavParams } from 'ionic-angular';
+import { NavController, Loading, LoadingController, AlertController, ModalController, NavParams, App } from 'ionic-angular';
 import { ScanPage } from '../scane-pages/scan/scan';
 import { OfferListPage } from '../offer-list/offer-list';
 import { PointListPage } from '../points/point-list/point-list';
@@ -62,7 +62,7 @@ export class HomePage {
     offer_detail:any={};
     language:any=[];
     toggle:boolean = false;
-    constructor(public navCtrl: NavController, public navParams: NavParams, public service:DbserviceProvider,public loadingCtrl:LoadingController,public storage:Storage, private barcodeScanner: BarcodeScanner,public alertCtrl:AlertController,public modalCtrl: ModalController,private push: Push,public translate:TranslateService,public constant:ConstantProvider,public socialSharing:SocialSharing) {
+    constructor(public navCtrl: NavController, public navParams: NavParams,public app: App, public service:DbserviceProvider,public loadingCtrl:LoadingController,public storage:Storage, private barcodeScanner: BarcodeScanner,public alertCtrl:AlertController,public modalCtrl: ModalController,private push: Push,public translate:TranslateService,public constant:ConstantProvider,public socialSharing:SocialSharing) {
         this.presentLoading();
         this.notification();
         this.lang = this.navParams.get("lang");
@@ -729,5 +729,76 @@ export class HomePage {
         catch(Error){
             return null;
         }
-    }    
+    }  
+    
+    
+
+    title: any = ""
+    no: any = ""
+    yes: any = ""
+    content: any = ""
+    Logout: any;
+    sure: any;
+
+
+    logout() {
+        this.translate.get('Logout!')
+            .subscribe(resp => {
+                this.Logout = resp;
+            })
+        this.translate.get('Are you sure you want Logout?')
+            .subscribe(resp => {
+                this.sure = resp;
+            })
+        this.translate.get('No')
+            .subscribe(resp => {
+                this.no = resp;
+            })
+        this.translate.get('Yes')
+            .subscribe(resp => {
+                this.yes = resp;
+            })
+        let alert = this.alertCtrl.create({
+            title: this.Logout,
+            message: this.sure,
+            buttons: [
+                {
+                    text: this.no,
+                    handler: () => {
+                        console.log('Cancel clicked');
+                        // this.d.('Action Cancelled!')
+                    }
+                },
+                {
+                    text: this.yes,
+                    handler: () => {
+                        this.storage.set('token', '');
+                        this.service.karigar_info = '';
+
+                        let alert2 = this.alertCtrl.create({
+                            title: 'Success!',
+                            subTitle: 'Logout Successfully',
+                            buttons: [{
+                                text: 'Ok',
+                                handler: () => {
+
+                                    console.log('Cancel clicked');
+                                }
+                            }]
+                        });
+                        alert2.present();
+                        this.app.getRootNav().setRoot(LanguagePage);
+                    }
+                }
+            ]
+        })
+
+        alert.present();
+
+    }
+
+
+
+
+
 }
