@@ -300,7 +300,7 @@ export class MyApp {
                                 {text: this.cancl, },
                                 {text: this.upd_now,
                                     handler: () => {
-                                        window.open('https://play.google.com/store/apps/details?id=com.aimyluminaries.app&hl=en','_system','location=yes');
+                                        window.open('https://play.google.com/store/apps/details?id=com.milanpower.app&hl=en','_system','location=yes');
                                     } 
                                 }
                             ]
@@ -340,7 +340,7 @@ export class MyApp {
         let alert = this.alertCtrl.create({
             title:'Sorry!',
             cssClass:'action-close status-alert',
-            subTitle:"Your current profile status is not <strong class=Approved>“Verified”</strong>.To know more, you can call us at <a href=tel:7558836538>7558836538</a>.",
+            subTitle:"Your current profile status is not <strong class=Approved>“Verified”</strong>.To know more, you can call us at <a href=tel:+91-141-4003819>+91-141-4003819</a>.",
             buttons: [
                 {
                     text: 'Okay',
