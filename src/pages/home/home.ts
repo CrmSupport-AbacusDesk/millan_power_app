@@ -293,7 +293,7 @@ export class HomePage {
             let alert = this.alertCtrl.create({
                 title:'Sorry!',
                 cssClass:'action-close',
-                subTitle:"Your current profile status is not  <strong>“Verified”</strong>. You only scan the coupon codes when your profile status is <strong class=Approved>“Verified”</strong>. To know more, you can call us at <a href=tel:7558836538>7558836538</a> or chat with us.",
+                subTitle:"Your current profile status is not  <strong>“Verified”</strong>. You only scan the coupon codes when your profile status is <strong class=Approved>“Verified”</strong>. To know more, you can call us at <a href=tel:+91-141-4003819>+91-141-4003819</a> or chat with us.",
                 buttons: [
                     // {
                     //     text: 'Chat With Us',
@@ -552,7 +552,7 @@ export class HomePage {
         let alert = this.alertCtrl.create({
             title:'Sorry!',
             cssClass:'action-close status-alert',
-            subTitle:"Your current profile status is not <strong class=Approved>“Verified”</strong>.To know more, you can call us at <a href=tel:7558836538>7558836538</a>.",
+            subTitle:"Your current profile status is not <strong class=Approved>“Verified”</strong>.To know more, you can call us at <a href=tel:+91-141-4003819>+91-141-4003819</a>.",
             buttons: [
                 {
                     text: 'Okay',
@@ -613,9 +613,9 @@ export class HomePage {
         // let image = "https://play-lh.googleusercontent.com/FEDtMP_dyMgM8rJtp4MFdp60g0fLuBYNbu3pBNsNH52knTsG1yDuNs56CFYu_X3XqYk=s180-rw";
         
         let image = "";
-        let app_url = "https://play.google.com/store/apps/details?id=com.aimyluminaries.app";
+        let app_url = "https://play.google.com/store/apps/details?id=com.milanpower.app";
         
-        this.socialSharing.share("Hey there join me (" + this.karigar_detail.full_name + "-" + this.karigar_detail.mobile_no + ") on Milan Power , a Electrician & Dealer app. Enter my code *" + this.karigar_detail.referral_code + "* to earn points back in your wallet!", "Reffral", image, app_url)
+        this.socialSharing.share("Hey there join me (" + this.karigar_detail.full_name + "-" + this.karigar_detail.mobile_no + ") on Milan Power , a Electrician. Enter my code *" + this.karigar_detail.referral_code + "* to earn points back in your wallet!", "Reffral", image, app_url)
         .then(resp=>{
             console.log(resp);
             
