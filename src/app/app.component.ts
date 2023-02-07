@@ -443,7 +443,7 @@ export class MyApp {
 
         const options: PushOptions = {
             android: {
-                senderID: '158421422619',
+                senderID: '659136432620',
                 icon: './assets/imgs/logo_small',
                 forceShow:true
             },
