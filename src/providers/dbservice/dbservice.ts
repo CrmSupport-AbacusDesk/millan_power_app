@@ -16,6 +16,10 @@ export class DbserviceProvider {
   karigar_info:any='';
 
   protected token_data : any;
+  category_url: any;
+    image_url: any;
+  userStorageData: any;
+  product_image_url: any;
   constructor(public http: HttpClient, private constant:ConstantProvider,public http1:HttpClient, public storage: Storage) 
   {
     console.log('Hello DbserviceProvider Provider');
