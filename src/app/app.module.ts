@@ -85,6 +85,9 @@ import { ProfileEditModalPageModule } from '../pages/profile-edit-modal/profile-
 import { RedeemTypePageModule } from '../pages/redeem-type/redeem-type.module';
 import { DigitalcatalogPage } from '../pages/digitalcatalog/digitalcatalog';
 import { Super30PageModule } from '../pages/super30/super30.module';
+import { CategoryPageModule } from './category/category.module';
+import { SubCategoryPageModule } from './sub-category/sub-category.module';
+import { SubCategoryPage } from './sub-category/sub-category';
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -118,7 +121,10 @@ export function createTranslateLoader(http: HttpClient) {
         PointDetailPageModule,
         ProfilePageModule,
         MainHomePageModule,
+        SubCategoryPageModule,
+        // SubCategoryPage,
         ProductsPageModule,
+        CategoryPageModule,
         TermsPageModule,
         AdvanceTextPageModule,
         ProductDetailPageModule,

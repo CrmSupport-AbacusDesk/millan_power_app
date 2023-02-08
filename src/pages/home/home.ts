@@ -39,6 +39,7 @@ import { MainCategoryPage } from '../main-category/main-category';
 import { ProfileEditModalPage } from '../profile-edit-modal/profile-edit-modal';
 import { RedeemTypePage } from '../redeem-type/redeem-type';
 import { Super30Page } from '../super30/super30';
+import { CategoryPage } from '../../app/category/category';
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html'
@@ -539,6 +540,19 @@ export class HomePage {
     {
         this.navCtrl.push(TransactionPage)
     }
+
+
+
+
+    goOnProductsCategoryPage()
+    {
+        this.navCtrl.push(CategoryPage)
+    }
+
+
+
+
+
     goOnGiftGallary()
     {
         this.navCtrl.push(GiftListPage)
