@@ -50,8 +50,8 @@ export class SubCategoryPage {
     console.log("sub cat call ==================================>");
     
     console.log(this.service);
-    this.state= this.service.userStorageData.state;
-    console.log(this.state);
+    // this.state= this.service.userStorageData.state;
+    // console.log(this.state);
     
     
   }
