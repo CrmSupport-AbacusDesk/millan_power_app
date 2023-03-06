@@ -294,7 +294,7 @@ export class HomePage {
             let alert = this.alertCtrl.create({
                 title:'Sorry!',
                 cssClass:'action-close',
-                subTitle:"Your current profile status is not  <strong>“Verified”</strong>. You only scan the coupon codes when your profile status is <strong class=Approved>“Verified”</strong>. To know more, you can call us at <a href=tel:+91-141-4003819>+91-141-4003819</a> or chat with us.",
+                subTitle:"Your current profile status is not  <strong>“Verified”</strong>. You only scan the coupon codes when your profile status is <strong class=Approved>“Verified”</strong>. To know more, you can call us at <a href=tel:+9178510585889>+91 78510585889</a> or chat with us.",
                 buttons: [
                     // {
                     //     text: 'Chat With Us',
@@ -566,7 +566,7 @@ export class HomePage {
         let alert = this.alertCtrl.create({
             title:'Sorry!',
             cssClass:'action-close status-alert',
-            subTitle:"Your current profile status is not <strong class=Approved>“Verified”</strong>.To know more, you can call us at <a href=tel:+91-141-4003819>+91-141-4003819</a>.",
+            subTitle:"Your current profile status is not <strong class=Approved>“Verified”</strong>.To know more, you can call us at <a href=tel:+9178510585889>+91 78510585889</a>.",
             buttons: [
                 {
                     text: 'Okay',
